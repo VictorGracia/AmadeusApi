@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer; // Espacio de nombres para autenticación JWT
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using api.Data; // Asegúrate de que esto coincide con la ubicación de tu DbContext
+using api.Data;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -80,10 +80,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins"); // Cambiado a "AllowAllOrigins"
 app.UseRouting();
-app.UseAuthentication(); // Asegúrate de que el middleware de autenticación se use antes de la autorización
+app.UseAuthentication();
 app.UseAuthorization();
 
-// Registra los controladores directamente en el pipeline
 app.MapControllers();
 
 // Configura Swagger
