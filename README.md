@@ -2,7 +2,7 @@
 # Para correr las pruebas unitarias, se hace desde Api y con dotnet test
 # En el front se está llamando la api desde http://localhost:5007 
 # El front se corre con ng serve
-
+# El usuario es: test y la constraseña: password del login 
 # Proyecto API
 
 Este proyecto es una API desarrollada utilizando .NET 8.0. porque es la versión que tengo disponible en mi maquina. La API se conecta a una base de datos SQL Server alojada en Azure.
